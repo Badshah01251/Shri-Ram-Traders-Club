@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="NexPace">
-    <link rel="icon" type="image/x-icon" href="./Assets/SRTC_Emblem.png">
+    <link rel="shortcut icon" href="./Assets/SRTC_Emblem.png" type="image/x-icon">
     <title>Shri Ram Traders Club | Desk of Latesh Narula</title>
     <link rel="stylesheet" href="./StyleSheets/GlobalStyle.css">
     <link rel="stylesheet" href="./StyleSheets/raDeskStyle.css">
