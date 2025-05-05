@@ -1,0 +1,160 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body {
+    width: 100%;
+  }
+  body .content_box {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    padding: 2rem 3rem;
+    background: url(../Assets/legals_background_desk.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+  }
+  body .content_box .primary {
+    font-size: 2rem;
+    background: var(--golden);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  body .content_box .pointed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  body .content_box .non-pointed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+  }
+  body .content_box .header {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  body .content_box .text {
+    max-width: 100%;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  body .content_box a {
+    color: #C4B369;
+    transition: all 0.3s linear;
+  }
+  body .content_box a:hover {
+    color: var(--white);
+  }
+  body .content_box ul li {
+    list-style: circle;
+    color: var(--white);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  body .content_box .table {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  body .content_box .table .table_container {
+    width: 100%;
+    overflow: auto;
+    padding: 1rem;
+  }
+  body .content_box .table .table_container table {
+    text-align: center;
+    background: rgba(17, 17, 17, 0.368627451);
+    -webkit-backdrop-filter: blur(0.3rem);
+            backdrop-filter: blur(0.3rem);
+    padding: 1rem;
+    box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.6), inset 0px 0px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 0.6rem;
+  }
+  body .content_box .table .table_container table thead tr th {
+    padding: 1rem 0.6rem;
+    background: var(--golden);
+    border-radius: 0.3rem;
+    color: var(--darker-gray);
+    min-width: 160px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  body .content_box .table .table_container table tbody tr {
+    color: var(--white);
+  }
+  body .content_box .table .table_container table tbody tr td {
+    padding: 1rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  body .content_box .table .table_container table tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1647058824);
+  }
+  body .content_box .table .table_container table tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1019607843);
+  }
+  body .content_box .table .table_container::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  body .content_box .table .table_container::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: var(--golden);
+    visibility: hidden;
+  }
+  body .content_box .table .table_container:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+  
+  @media all and (max-width: 999px) {
+    body .content_box {
+      background: url(../Assets/legals_background_mob.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    body .content_box .primary {
+      font-size: 1.6rem;
+      text-align: left;
+    }
+    body .content_box ul li {
+      list-style: circle;
+      color: var(--white);
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    body .content_box .table {
+      padding: 0;
+    }
+  }/*# sourceMappingURL=legalStyle.css.map */

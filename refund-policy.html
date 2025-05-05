@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NexPace">
+    <link rel="shortcut icon" href="./assets/SRTC_Emblem.png" type="image/x-icon">
+    <title>Shri Ram Traders Club | Refund Policy</title>
+    <link rel="stylesheet" href="./StyleSheets/GlobalStyle.css">
+    <link rel="stylesheet" href="./StyleSheets/legalStyle.css">
+</head>
+
+<body>
+    <!-- navigation section start -->
+    <nav>
+        <img class="logo" src="./Assets/brandIcon.svg" alt="Shri Ram Traders Club | Logo">
+        <span class="line"></span>
+        <ul class="main_nav">
+            <a href="./index.html">
+                <li>Home</li>
+            </a>
+            <a href="./about.html">
+                <li>About</li>
+            </a>
+            <a href="./services.html">
+                <li>Services</li>
+            </a>
+            <a href="./FAQs.html">
+                <li>FAQs</li>
+            </a>
+            <a href="./testimonials.html">
+                <li>Testimonials</li>
+            </a>
+            <a href="./investor-charter.html">
+                <li>Investor Charter</li>
+            </a>
+            <a href="complaint-board.html">
+                <li>Complaint Board</li>
+            </a>
+            <a href="./desk-of-LateshNarula.php">
+                <li>RA's Desk</li>
+            </a>
+            <a href="./elite-program.html">
+                <li>Elite Program</li>
+            </a>
+        </ul>
+        <button class="mobNav" id="mobNav" onclick="navToggler()">
+            <div class="navElement one"></div>
+            <div class="navElement two"></div>
+            <div class="navElement three"></div>
+        </button>
+    </nav>
+    <!-- navigation section end -->
+
+    <!-- content section start -->
+    <div class="content_box">
+        <p class="primary">Refund Policy</p>
+
+        <p class="text">
+            We prioritize our customers and are dedicated to delivering the highest quality services.<br><br>
+            It’s important for our clients to understand that we cannot provide a return assurance or guarantee on our
+            calls, which means we cannot issue refunds on subscriptions, regardless of clients outcomes.<br><br>
+            Once a service is subscribed to and payment is completed, it cannot be cancelled or refunded under any
+            circumstances. If a client is dissatisfied for any unforeseen reason, they are welcome to reach out to us
+            for guidance and support.<br><br>
+            We will make every effort to enhance satisfaction in such instances. However, any request from a client to
+            cancel a service or receive a refund will not be accommodated.
+        </p>
+        <div class="pointed">
+            <p class="header">Before making a payment, we strongly encourage our visitors and potential clients to:</p>
+            <ul class="text">
+                <li>Review all information regarding our services and the support we provide to clients.</li>
+                <li>Familiarize themselves with our Terms and Conditions.</li>
+                <li>Read our Privacy Policy and Refund Policy.</li>
+            </ul>
+        </div>
+        <p class="text">Understand that refunds are not possible under any circumstances.</p>
+        
+        <p class="text">
+            Kindly notice since what we offer our digital services, once you avail the service, you don't have a provision to claim for a refund. However you are always free to check at our past performance as well as attended demo sessions inorder to figure out the quality of services being offered.
+        </p>
+    </div>
+    <!-- content section end -->
+
+    <!-- footer section start -->
+    <footer>
+        <div class="container">
+            <div class="compDec">
+                <img src="./Assets/brandIcon.svg" alt="!SRTC_logo">
+                <p class="text">
+                    313,3rd Floor, Wonder Mall<br>
+                    Alwar (Rajasthan) - 301001
+                    <br><br>
+                    support@shriramtradersclub.com
+                </p>
+                <div class="connect">
+                    <a href="/"><ion-icon name="call"></ion-icon>+91 911-912-0995</a>
+                    <div class="rounded">
+                        <a href="https://wa.me/+919119120995"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                        <a href="https://t.me/shriramtraderclub"><box-icon type='logo' name='telegram'></box-icon></a>
+                        <a href="https://www.facebook.com/share/12Agdo5kEWP/?mibextid=wwXIfr"><ion-icon
+                                name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com/shriramtradersclub1/profilecard/?igsh=a3o1NjBtZzZ3NWk1"><ion-icon
+                                name="logo-instagram"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <p class="header">Legals</p>
+                <div class="link">
+                    <a href="./disclosure.html">Disclosure & Disclaimer</a>
+                    <a href="./refund-policy.html">Refund Policy</a>
+                    <a href="./grievance-redressal.html">Grievance Redressal</a>
+                </div>
+            </div>
+            <div class="links">
+                <p class="header">Useful Links</p>
+                <div class="link">
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./FAQs.html">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="declaration">
+            <p>&copy; 2025 Shri Ram Traders Club | All the Rights Reserved.</p>
+            <p>Crafted by
+                <a href="https://nexpace.in/" target="_blank">
+                    <ion-icon name="open"></ion-icon>
+                    NexPace
+                </a>
+            </p>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+
+
+    <!-- Icon Package Integration -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Navigation JS -->
+    <script>
+        const section = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('nav ul a');
+        window.onscroll = () => {
+            section.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 77;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('nav ul a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        };
+    </script>
+    <!-- MobNav JS -->
+    <script>
+        let nav = document.querySelector('.main_nav');
+        let mobNav = document.getElementById('mobNav');
+
+        function navToggler() {
+            nav.classList.toggle('show-nav');
+            mobNav.classList.toggle('mobNavCng');
+        }
+
+        function closeNav() {
+            nav.classList.remove('show-nav');
+            mobNav.classList.remove('mobNavCng');
+        }
+    </script>
+</body>
+
+</html>

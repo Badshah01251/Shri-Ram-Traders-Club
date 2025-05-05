@@ -1,0 +1,133 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body .content_box {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    padding: 2rem 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5294117647), rgba(0, 0, 0, 0.4666666667)), url(../Assets/about_background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  body .content_box .primary {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--white);
+  }
+  body .content_box .primary span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.6rem;
+    background: linear-gradient(135deg, #816a34, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .content_box .paras {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  body .content_box .paras .header {
+    font-size: 1.3rem;
+    color: var(--white);
+  }
+  body .content_box .paras .text {
+    color: var(--lighter-gray);
+  }
+  body .content_box .desk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .content_box .desk p {
+    color: var(--white);
+  }
+  body .content_box .desk a {
+    color: var(--darker-gray);
+    gap: 0.6rem;
+  }
+  body .content_box .desk a ion-icon {
+    font-size: 1.2rem;
+  }
+  
+  @media all and (max-width: 999px) {
+    body .content_box {
+      width: 100%;
+      min-height: calc(100vh - 87px);
+      margin-top: 87px;
+      padding: 2rem 1.6rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.5294117647), rgba(0, 0, 0, 0.4666666667)), url(../Assets/about_background.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    body .content_box .primary {
+      font-size: 1.6rem;
+      text-align: center;
+      color: var(--white);
+    }
+    body .content_box .primary span {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 2.6rem;
+      background: linear-gradient(135deg, #816a34, #EBD988, #e9d676, #C4B369);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    body .content_box .paras {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    body .content_box .paras .header {
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+    body .content_box .paras .text {
+      color: var(--lighter-gray);
+    }
+    body .content_box .desk {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    body .content_box .desk p {
+      color: var(--white);
+    }
+    body .content_box .desk a {
+      color: var(--darker-gray);
+      gap: 0.6rem;
+    }
+    body .content_box .desk a ion-icon {
+      font-size: 1.2rem;
+    }
+  }/*# sourceMappingURL=about.css.map */

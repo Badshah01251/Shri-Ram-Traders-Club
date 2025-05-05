@@ -1,0 +1,144 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body .faq_container {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    background: url(../Assets/abt&faq_background_desk.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  body .faq_container .main_text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  body .faq_container .main_text .header {
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, #d3b05f, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .faq_container .main_text .sec_text {
+    color: var(--lighter-gray);
+  }
+  body .faq_container .faqs {
+    width: 80%;
+  }
+  body .faq_container .faqs .wrapper {
+    background: var(--darker-gray);
+    box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.6), inset 0px 0px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    padding: 10px 37px;
+    border-radius: 5px;
+  }
+  body .faq_container .faqs .wrapper .toggler {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #EBD988;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 0;
+  }
+  body .faq_container .faqs .wrapper .toggler .icon {
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+  }
+  body .faq_container .faqs .wrapper .content {
+    position: relative;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.6;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  body .faq_container .faqs .wrapper .content p {
+    color: var(--lighter-gray);
+  }
+  
+  @media all and (max-width: 999px) {
+    body .faq_container {
+      width: 100%;
+      min-height: calc(100vh - 87px);
+      margin-top: 87px;
+      padding: 2rem 1rem;
+      background: url(../Assets/abt&faq_background_desk.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    body .faq_container .main_text {
+      text-align: center;
+    }
+    body .faq_container .main_text .header {
+      font-size: 1.3rem;
+    }
+    body .faq_container .faqs {
+      width: 100%;
+    }
+    body .faq_container .faqs .wrapper {
+      background: var(--darker-gray);
+      box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.6), inset 0px 0px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    body .faq_container .faqs .wrapper .toggler {
+      width: 100%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      color: #EBD988;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 15px 0;
+    }
+    body .faq_container .faqs .wrapper .toggler .icon {
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+    body .faq_container .faqs .wrapper .content {
+      position: relative;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.6;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    body .faq_container .faqs .wrapper .content p {
+      color: var(--lighter-gray);
+    }
+  }/*# sourceMappingURL=faqStyle.css.map */

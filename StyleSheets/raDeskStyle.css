@@ -1,0 +1,153 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body .desk_container {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    padding: 1rem 6rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6901960784), rgba(0, 0, 0, 0.4)), url(../Assets/desk_bg_desk.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+  }
+  body .desk_container .header_texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  body .desk_container .header_texts .primary {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #d3b05f, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .desk_container .header_texts .secondary {
+    color: var(--lighter-gray);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  body .desk_container .header_texts .secondary span {
+    color: var(--white);
+  }
+  body .desk_container .desk_data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  body .desk_container .desk_data .content {
+    width: calc((100% - 4rem) / 3);
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.1294117647);
+    -webkit-backdrop-filter: blur(0.3rem);
+            backdrop-filter: blur(0.3rem);
+    border-radius: 0.3rem;
+    overflow: hidden;
+  }
+  body .desk_container .desk_data .content .post-img {
+    width: 100%;
+  }
+  body .desk_container .desk_data .content .texts {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .desk_container .desk_data .content .texts .main-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body .desk_container .desk_data .content .texts .main-texts .post_title {
+    font-size: 1.2rem;
+    color: var(--white);
+  }
+  body .desk_container .desk_data .content .texts .main-texts .tstamp {
+    font-size: 0.8rem;
+    color: var(--lighter-gray);
+  }
+  body .desk_container .desk_data .content .texts .exp_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    background: #0578bb;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  body .desk_container .desk_data .content .texts .exp_btn ion-icon {
+    font-size: 1.2rem;
+  }
+  body .desk_container .desk_data .content .texts .exp_btn:hover {
+    background: #1b9be6;
+  }
+  body .desk_container .desk_data .content .texts .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  body .desk_container .desk_data .content .texts .profile .profilePhoto {
+    width: 40px;
+    border-radius: 100rem;
+  }
+  body .desk_container .desk_data .content .texts .profile .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.3rem;
+    line-height: 1;
+  }
+  body .desk_container .desk_data .content .texts .profile .text .name {
+    font-weight: 300;
+    color: var(--white);
+  }
+  body .desk_container .desk_data .content .texts .profile .text .desg {
+    font-size: 0.78rem;
+    color: var(--lighter-gray);
+  }
+  
+  @media all and (max-width: 999px) {
+    body .desk_container {
+      padding: 1rem 2rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.6901960784), rgba(0, 0, 0, 0.4)), url(../Assets/desk_bg_mob.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    body .desk_container .header_texts .primary {
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+    body .desk_container .desk_data {
+      gap: 1rem;
+    }
+    body .desk_container .desk_data .content {
+      width: 100%;
+    }
+  }/*# sourceMappingURL=raDeskStyle.css.map */

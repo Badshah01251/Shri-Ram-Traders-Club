@@ -1,0 +1,144 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body .content_box {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    padding: 2rem 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5294117647), rgba(0, 0, 0, 0.4666666667)), url(../Assets/about_background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+  }
+  body .content_box .title_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .content_box .title_text .main {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #816a34, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .content_box .title_text .primary {
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-align: center;
+    color: var(--white);
+  }
+  body .content_box .title_text .primary span {
+    font-weight: 300;
+    background: linear-gradient(135deg, #816a34, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .content_box .tes_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  body .content_box .tes_box .box {
+    width: 70%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.0901960784);
+    box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.6), inset 0px 0px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .content_box .tes_box .box .rv-text {
+    font-weight: 300;
+    color: var(--white);
+  }
+  body .content_box .tes_box .box .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  body .content_box .tes_box .box .title img {
+    width: 60px;
+    border-radius: 100%;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.2666666667);
+  }
+  body .content_box .tes_box .box .title .namenplace {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  body .content_box .tes_box .box .title .namenplace .name {
+    font-weight: 500;
+    background: linear-gradient(135deg, #816a34, #EBD988, #e9d676, #C4B369);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  body .content_box .tes_box .box .title .namenplace .loc {
+    color: var(--lighter-gray);
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  body .content_box .catcher {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  body .content_box .catcher p {
+    font-size: 0.9rem;
+    color: var(--white);
+    text-align: center;
+  }
+  body .content_box .catcher a {
+    padding: 8px 16px;
+    background: #0468b9;
+    border-radius: 0.4rem;
+    font-weight: 300;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+  body .content_box .catcher a ion-icon {
+    font-size: 1.2rem;
+  }
+  body .content_box .catcher a:hover {
+    background: #0582e9;
+  }
+  
+  @media all and (max-width: 999px) {
+    body .content_box {
+      padding: 2rem 2rem;
+    }
+    body .content_box .tes_box .box {
+      width: 100%;
+      padding: 1rem 1.4rem;
+    }
+    body .content_box .catcher {
+      width: 100%;
+    }
+  }/*# sourceMappingURL=testimonial.css.map */

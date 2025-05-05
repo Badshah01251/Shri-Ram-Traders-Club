@@ -1,0 +1,63 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --accent-gray: #565656;
+    --lighter-gray: #7d7d7d;
+    --darker-gray: #111111;
+    --golden: linear-gradient(135deg, #A18645, #EBD988, #F5E7A1, #C4B369);
+  }
+  
+  body .content_box {
+    width: 100%;
+    min-height: calc(100vh - 87px);
+    margin-top: 87px;
+    padding: 2rem 3rem;
+    background: url(../Assets/legals_background_desk.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .content_box p {
+    font-size: 1.2rem;
+    color: var(--lighter-gray);
+  }
+  body .content_box img {
+    width: 100%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  body .content_box a {
+    gap: 0.6rem;
+    color: var(--darker-gray);
+  }
+  
+  @media all and (max-width: 999px) {
+    body .content_box {
+      width: 100%;
+      min-height: calc(50vh - 87px);
+      margin-top: 87px;
+      padding: 0 1rem;
+      background: url(../Assets/legals_background_mob.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    body .content_box p {
+      font-size: 1.2rem;
+      color: var(--lighter-gray);
+    }
+    body .content_box img {
+      width: 100%;
+    }
+  }/*# sourceMappingURL=complaint-board.css.map */

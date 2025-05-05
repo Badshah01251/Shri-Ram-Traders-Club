@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NexPace">
+    <link rel="shortcut icon" href="./Assets/SRTC_Emblem.png" type="image/x-icon">
+    <title>Shri Ram Traders Club | Elite Program</title>
+    <style type="text/css" media="all">
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --accent-gray: #565656;
+  --lighter-gray: #7d7d7d;
+  --darker-gray: #111111;
+  --golden: linear-gradient(#A18645, #EBD988, #F5E7A1, #C4B369);
+}
+
+body .container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7803921569), rgba(0, 0, 0, 0.4666666667)), url(../Assets/eliteBg_desk.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body .container .landing_text {
+  font-family: "Tangerine", serif;
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+}
+body .container .landing_text span {
+  background: var(--golden);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .container .cnt-btn {
+  padding: 0.8rem 2rem;
+  background: var(--darker-gray);
+  border: 2px solid var(--white);
+  border-radius: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+body .container .cnt-btn ion-icon {
+  font-size: 1.2rem;
+}
+body .container .cnt-btn:hover {
+  background: #05d64b;
+}
+
+@media all and (max-width: 999px) {
+  body .container {
+    background: linear-gradient(rgba(0, 0, 0, 0.7803921569), rgba(0, 0, 0, 0.4666666667)), url(../Assets/eliteBg_mob.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body .container .landing_text {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=elitesoon.css.map */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="landing_text">Something great is being organized by Shri Ram Traders Club. Stay<br><span
+                class="type"></span>
+        </p>
+        <a class="cnt-btn" href="https://wa.me/+919119120995"><ion-icon name="logo-whatsapp"></ion-icon>Connect Now</a>
+    </div>
+
+
+
+
+
+
+    <!-- Icon Package Integration -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- Initialize Typing Text -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Custom JS for Typing Text -->
+    <script>
+        var typed = new Typed('.type', {
+            strings: ['Tuned...', 'Connected...'],
+            typeSpeed: 30,
+            backDelay: 2000,
+            backSpeed: 20,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="NexPace">
+    <link rel="shortcut icon" href="./assets/SRTC_Emblem.png" type="image/x-icon">
+    <title>Shri Ram Traders Club | Home</title>
+    <link rel="stylesheet" href="./StyleSheets/GlobalStyle.css">
+    <link rel="stylesheet" href="./StyleSheets/landingPageDesign.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./StyleSheets/swiper-bundle.min.css" />
+    <!-- Meta Pixel Code -->
+
+    <script>
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1904624789731967');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1904624789731967&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <!-- navigation section start -->
+    <nav>
+        <img class="logo" src="./Assets/brandIcon.svg" alt="Shri Ram Traders Club | Logo">
+        <span class="line"></span>
+        <ul class="main_nav">
+            <a class="active">
+                <li>Home</li>
+            </a>
+            <a href="./about.html">
+                <li>About</li>
+            </a>
+            <a href="./services.html">
+                <li>Services</li>
+            </a>
+            <a href="./FAQs.html">
+                <li>FAQs</li>
+            </a>
+            <a href="./testimonials.html">
+                <li>Testimonials</li>
+            </a>
+            <a href="./investor-charter.html">
+                <li>Investor Charter</li>
+            </a>
+            <a href="./complaint-board.html">
+                <li>Complaint Board</li>
+            </a>
+            <a href="./desk-of-LateshNarula.php">
+                <li>RA's Desk</li>
+            </a>
+            <a href="./elite-program.html">
+                <li>Elite Program</li>
+            </a>
+        </ul>
+        <button class="mobNav" id="mobNav" onclick="navToggler()">
+            <div class="navElement one"></div>
+            <div class="navElement two"></div>
+            <div class="navElement three"></div>
+        </button>
+    </nav>
+    <!-- navigation section end -->
+
+    <!-- content section start -->
+    <!-- landing section start -->
+    <div class="landing">
+        <p class="header">Welcome to <br><span>Shri Ram Traders Club</span></p>
+        <p class="text">Start your real Stock Market journey with the hand holding of SEBI Registered Expert.</p>
+        <div class="buttons">
+            <a target="_blank" href="https://telegram.me/+RPxFZAhplmI0OTM1" class="primary_btn">
+                <button onclick="customEvent()"><box-icon name='telegram' type='logo'></box-icon> Join Us</button>
+            </a>
+            <a href="./services.html" class="secondary_btn">
+                <button>Explore <ion-icon name="arrow-round-forward"></ion-icon></button>
+            </a>
+        </div>
+    </div>
+    <!-- landing section end -->
+
+    <!-- numbers section start -->
+    <div class="counter_box">
+        <div class="col">
+
+                    <div class="content">
+
+                        <div class="declaration">
+                            <ion-icon name="medal"></ion-icon>
+                            <p class="text">Years of Experience</p>
+                        </div>
+                        <div class="main_counter">
+                            <p class="counter2">17</p><span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="col">
+                    <div class="content">
+                        <div class="declaration">
+                            <ion-icon name="contacts"></ion-icon>
+                            <p class="text">Happy Consumers</p>
+                        </div>
+                        <div class="main_counter">
+                            <p class="counter">120</p><span>K</span>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <!-- numbers section end -->
+
+    <!-- feature section start -->
+    <div class="feature">
+        <p class="why-us">Why Shri Ram Traders Club?</p>
+        <div class="main_content">
+            <div class="box">
+                <img src="./Assets/risk_reward.svg" alt="!">
+                <div class="text">
+                    <p class="primary">Maintaining Proper Risk Reward Ratio</p>
+                    <p class="secondary">Our commitment to disciplined trading aims to reduce your risk exposure while
+                        maximizing revenue potential.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Assets/strategies.svg" alt="!">
+                <div class="text">
+                    <p class="primary">Maintaining Proper Trading Strategies</p>
+                    <p class="secondary">Understandable and implementable strategies across: Equities| future & options|
+                        commodities.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Assets/no1_traders.svg" alt="!">
+                <div class="text">
+                    <p class="primary">Complete Expert Guidance</p>
+                    <p class="secondary">Connect with our team of experts for doubt clarification at any point of time
+                        within market
+                        hours.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./Assets/smart_trading.svg" alt="!">
+                <div class="text">
+                    <p class="primary">Super Smart Trading</p>
+                    <p class="secondary">Learn creating Algorithmic trading strategies and get Specialized Wealth
+                        Management
+                        Solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- feature section end -->
+    
+    <!-- testimonial section start -->
+    <div class="testimonials">
+        <p class="primary">Testimonials</p>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title">
+                        <img src="./Assets/testimonials_dps/one.jpg" alt="!">
+                        <div class="namenplace">
+                            <p class="name">Vishal</p>
+                            <p class="loc">Delhi</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">I've been using Shri Ram Traders Club's advisory services for a few months now,
+                        and I'm really impressed. Their team is knowledgeable and responsive, and they've helped me make
+                        some profitable trades. I've seen a significant return on my investment, and I feel confident
+                        that I'm in good hands.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        <img src="./Assets/testimonials_dps/two.jpg" alt="!">
+                        <div class="namenplace">
+                            <p class="name">Rajesh</p>
+                            <p class="loc">Patna</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">Shri Ram Traders Club offers a range of trading strategies and tools. While I've
+                        had
+                        some success, I've also experienced a few losses. The platform is user-friendly, but I sometimes
+                        find it difficult to get immediate support. Overall, it's been a mixed experience.</p>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title">
+                        <img src="./Assets/testimonials_dps/three.jpg" alt="!">
+                        <div class="namenplace">
+                            <p class="name">Sumit</p>
+                            <p class="loc">Roorkee</p>
+                        </div>
+                    </div>
+                    <p class="rv-text">Shri Ram Traders offers a comprehensive suite of trading tools and indicators.
+                        The platform is generally user-friendly. Their research reports are well-written and
+                        informative.</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+        <!-- See More Button -->
+        <a href="./testimonials.html">See More...</a>
+    </div>
+    <!-- testimonial section end -->
+
+    <!-- content section end -->
+
+
+
+    <!-- Separator line -->
+    <div class="line"></div>
+
+    <!-- footer section start -->
+    <footer>
+        <div class="container">
+            <div class="compDec">
+                <img src="./Assets/brandIcon.svg" alt="!SRTC_logo">
+                <p class="text">
+                    313,3rd Floor, Wonder Mall<br>
+                    Alwar (Rajasthan) - 301001
+                    <br><br>
+                    support@shriramtradersclub.com
+                </p>
+                <div class="connect">
+                    <a href="/"><ion-icon name="call"></ion-icon>+91 911-912-0995</a>
+                    <div class="rounded">
+                        <a href="https://wa.me/+919119120995"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                        <a href="https://t.me/shriramtraderclub"><box-icon type='logo' name='telegram'></box-icon></a>
+                        <a href="https://www.facebook.com/share/12Agdo5kEWP/?mibextid=wwXIfr"><ion-icon
+                                name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com/shriramtradersclub1/profilecard/?igsh=a3o1NjBtZzZ3NWk1"><ion-icon
+                                name="logo-instagram"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="links">
+                <p class="header">Legals</p>
+                <div class="link">
+                    <a href="./disclosure.html">Disclosure & Disclaimer</a>
+                    <a href="./refund-policy.html">Refund Policy</a>
+                    <a href="./grievance-redressal.html">Grievance Redressal</a>
+                </div>
+            </div>
+            <div class="links">
+                <p class="header">Useful Links</p>
+                <div class="link">
+                    <a href="./about.html">About</a>
+                    <a href="./services.html">Services</a>
+                    <a href="./FAQs.html">FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="declaration">
+            <p>&copy; 2025 Shri Ram Traders Club | All the Rights Reserved.</p>
+            <p>Crafted by
+                <a href="#" target="_blank">
+                    <ion-icon name="open"></ion-icon>
+                    Bajaji Ad Agencey   
+                </a>
+            </p>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!------- Pop-Up Section Start ------->
+    <div class="popWindow" onclick="closePopUp()">
+        <div class="content">
+            <img src="./Assets/Latesh Narula.jpg" alt="!error">
+            <div class="text">
+                <p class="primary">Join one of the most trusted SEBI Registered Advisors Latesh Narula</p>
+                <p class="secondary">Click the button below to join our Telegram Channel Shri Ram Traders Club and
+                    always stay Updated.</p>
+                <a href="https://telegram.me/+RPxFZAhplmI0OTM1" target="_blank" class="pop_up_cta"><button><box-icon
+                            name='telegram' type='logo' color='#002715'></box-icon> Join
+                        Now</button></a>
+            </div>
+        </div>
+    </div>
+    <!------- Pop-Up Section End ------->
+
+
+
+
+
+
+
+    <!-- ----------------------------------- -->
+    <!-- --------Java Script Section-------- -->
+    <!-- ----------------------------------- -->
+
+
+    <!-- Icon Package Integration -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
+    <!-- Navigation JS -->
+    <script>
+        const section = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('nav ul a');
+        window.onscroll = () => {
+            section.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 77;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('nav ul a[href*=' + id + ']').classList.add('active');
+                    });
+                };
+            });
+        };
+    </script>
+
+    <!-- MobNav JS -->
+    <script>
+        let nav = document.querySelector('.main_nav');
+        let mobNav = document.getElementById('mobNav');
+
+        function navToggler() {
+            nav.classList.toggle('show-nav');
+            mobNav.classList.toggle('mobNavCng');
+        }
+
+        function closeNav() {
+            nav.classList.remove('show-nav');
+            mobNav.classList.remove('mobNavCng');
+        }
+    </script>
+
+    <!-- Initializing Number Counter JS -->
+    <script src="./Counter-Up2-master/dist/index.js"></script>
+    <!-- Custom JS for Number Counter -->
+    <script>
+
+        const counterUp = window.counterUp.default
+
+
+        const callback = entries => {
+            entries.forEach(entry => {
+                const el = entry.target
+                if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                    counterUp(el, {
+                        duration: 2000,
+                        delay: 16,
+                    })
+                    el.classList.add('is-visible')
+                }
+                const fl = entry.target
+                if (entry.isIntersecting && !fl.classList.contains('is-visible')) {
+                    counterUp(fl, {
+                        duration: 2000,
+                        delay: 16,
+                    })
+                    fl.classList.add('is-visible')
+                }
+                const gl = entry.target
+                if (entry.isIntersecting && !gl.classList.contains('is-visible')) {
+                    counterUp(gl, {
+                        duration: 2000,
+                        delay: 16,
+                    })
+                    gl.classList.add('is-visible')
+                }
+            })
+        }
+
+        const IO = new IntersectionObserver(callback, {
+            threshold: 1
+        })
+
+        const el = document.querySelector('.counter')
+        IO.observe(el)
+        const fl = document.querySelector('.counter2')
+        IO.observe(fl)
+        const gl = document.querySelector('.counter3')
+        IO.observe(gl)
+    </script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+
+    <!-- PopUp Window JS -->
+    <script>
+        const popWindow = document.querySelector(".popWindow");
+
+        window.addEventListener("load", function () {
+            this.setTimeout(
+                function open(event) {
+                    popWindow.classList.add("show");
+                }, 3000
+            );
+        });
+
+        function closePopUp() {
+            popWindow.classList.remove("show");
+        };
+    </script>
+    <!--Track JS-->
+
+    <script>
+
+        function customEvent() {
+            fbq('track', 'Contact');
+        }
+    </script>
+</body>
+
+</html>
