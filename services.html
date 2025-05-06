@@ -153,7 +153,7 @@
                             <p class="text">Years of Experience</p>
                         </div>
                         <div class="main_counter">
-                            <p class="counter2">17</p><span>+</span>
+                            <p class="counter" data-target="17">0</p><span>+</span>
                         </div>
                     </div>
                 </div>
@@ -162,10 +162,10 @@
                     <div class="content">
                         <div class="declaration">
                             <ion-icon name="contacts"></ion-icon>
-                            <p class="text">Community of</p>
+                            <p class="text">Happy Consumers</p>
                         </div>
                         <div class="main_counter">
-                            <p class="counter">120</p><span>K</span>
+                            <p class="counter" data-target="120">0</p><span>K</span>
                         </div>
                     </div>
                 </div>
@@ -237,90 +237,47 @@
 
 
 
+    <!-- JavaScript Section -->
+    <script>
+        //  Number Counter JS
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 1500; // Animation duration in ms
+            const start = 0;
+            const increment = target / (duration / 16); // Roughly 60fps
+            
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer to trigger animation when element is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    animateCounter(entry.target);
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, { threshold: 0.1 }); // Reduced threshold to 10% visibility
+
+        // Observe all counter elements
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+    </script>
 
     <!-- Icon Package Integration -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- Navigation JS -->
-    <script>
-        const section = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('nav ul a');
-        window.onscroll = () => {
-            section.forEach(sec => {
-                let top = window.scrollY;
-                let offset = sec.offsetTop - 77;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
-                if (top >= offset && top < offset + height) {
-                    navLinks.forEach(links => {
-                        links.classList.remove('active');
-                        document.querySelector('nav ul a[href*=' + id + ']').classList.add('active');
-                    });
-                };
-            });
-        };
-    </script>
-    <!-- MobNav JS -->
-    <script>
-        let nav = document.querySelector('.main_nav');
-        let mobNav = document.getElementById('mobNav');
-
-        function navToggler() {
-            nav.classList.toggle('show-nav');
-            mobNav.classList.toggle('mobNavCng');
-        }
-
-        function closeNav() {
-            nav.classList.remove('show-nav');
-            mobNav.classList.remove('mobNavCng');
-        }
-    </script>
-    <!-- Initializing Number Counter JS -->
-    <script src="./Counter-Up2-master/dist/index.js"></script>
-    <!-- Custom JS for Number Counter -->
-    <script>
-        const counterUp = window.counterUp.default
-
-        const callback = entries => {
-            entries.forEach(entry => {
-                const el = entry.target
-                if (entry.isIntersecting && !el.classList.contains('is-visible')) {
-                    counterUp(el, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    el.classList.add('is-visible')
-                }
-                const fl = entry.target
-                if (entry.isIntersecting && !fl.classList.contains('is-visible')) {
-                    counterUp(fl, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    fl.classList.add('is-visible')
-                }
-                const gl = entry.target
-                if (entry.isIntersecting && !gl.classList.contains('is-visible')) {
-                    counterUp(gl, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    gl.classList.add('is-visible')
-                }
-            })
-        }
-
-        const IO = new IntersectionObserver(callback, {
-            threshold: 1
-        })
-
-        const el = document.querySelector('.counter')
-        IO.observe(el)
-        const fl = document.querySelector('.counter2')
-        IO.observe(fl)
-        const gl = document.querySelector('.counter3')
-        IO.observe(gl)
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

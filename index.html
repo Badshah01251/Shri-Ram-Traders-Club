@@ -11,29 +11,7 @@
     <link rel="stylesheet" href="./StyleSheets/landingPageDesign.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./StyleSheets/swiper-bundle.min.css" />
-    <!-- Meta Pixel Code -->
-
-    <script>
-
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1904624789731967');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1904624789731967&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
-
 <body>
     <!-- navigation section start -->
     <nav>
@@ -95,30 +73,28 @@
     <!-- numbers section start -->
     <div class="counter_box">
         <div class="col">
-
-                    <div class="content">
-
-                        <div class="declaration">
-                            <ion-icon name="medal"></ion-icon>
-                            <p class="text">Years of Experience</p>
-                        </div>
-                        <div class="main_counter">
-                            <p class="counter2">17</p><span>+</span>
-                        </div>
-                    </div>
+            <div class="content">
+                <div class="declaration">
+                    <ion-icon name="medal"></ion-icon>
+                    <p class="text">Years of Experience</p>
                 </div>
-                <div class="line"></div>
-                <div class="col">
-                    <div class="content">
-                        <div class="declaration">
-                            <ion-icon name="contacts"></ion-icon>
-                            <p class="text">Happy Consumers</p>
-                        </div>
-                        <div class="main_counter">
-                            <p class="counter">120</p><span>K</span>
-                        </div>
-                    </div>
+                <div class="main_counter">
+                    <p class="counter" data-target="17">0</p><span>+</span>
                 </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="col">
+            <div class="content">
+                <div class="declaration">
+                    <ion-icon name="contacts"></ion-icon>
+                    <p class="text">Happy Consumers</p>
+                </div>
+                <div class="main_counter">
+                    <p class="counter" data-target="120">0</p><span>K</span>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- numbers section end -->
 
@@ -219,8 +195,6 @@
 
     <!-- content section end -->
 
-
-
     <!-- Separator line -->
     <div class="line"></div>
 
@@ -277,7 +251,7 @@
     <!-- footer section end -->
 
     <!------- Pop-Up Section Start ------->
-    <div class="popWindow" onclick="closePopUp()">
+    <!-- <div class="popWindow" onclick="closePopUp()">
         <div class="content">
             <img src="./Assets/Latesh Narula.jpg" alt="!error">
             <div class="text">
@@ -289,131 +263,89 @@
                         Now</button></a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!------- Pop-Up Section End ------->
 
-
-
-
-
-
-
-    <!-- ----------------------------------- -->
-    <!-- --------Java Script Section-------- -->
-    <!-- ----------------------------------- -->
-
-
-    <!-- Icon Package Integration -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-
-    <!-- Navigation JS -->
+    <!-- JavaScript Section -->
     <script>
-        const section = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('nav ul a');
-        window.onscroll = () => {
-            section.forEach(sec => {
-                let top = window.scrollY;
-                let offset = sec.offsetTop - 77;
-                let height = sec.offsetHeight;
-                let id = sec.getAttribute('id');
-                if (top >= offset && top < offset + height) {
-                    navLinks.forEach(links => {
-                        links.classList.remove('active');
-                        document.querySelector('nav ul a[href*=' + id + ']').classList.add('active');
-                    });
-                };
+        //  Number Counter JS
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 1500; // Animation duration in ms
+            const start = 0;
+            const increment = target / (duration / 16); // Roughly 60fps
+            
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer to trigger animation when element is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    animateCounter(entry.target);
+                    entry.target.classList.add('animated');
+                }
             });
-        };
+        }, { threshold: 0.1 }); // Reduced threshold to 10% visibility
+
+        // Observe all counter elements
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
     </script>
 
-    <!-- MobNav JS -->
-    <script>
+
+<!-- Navigation JS  -->
+<script>
+    const section = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('nav ul a');
+    window.onscroll = () => {
+        section.forEach(sec => {
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 77;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
+            if (top >= offset && top < offset + height) {
+                navLinks.forEach(links => {
+                    links.classList.remove('active');
+                    document.querySelector('nav ul a[href*=' + id + ']').classList.add('active');
+                });
+            };
+        });
+    };
+    </script>
+
+
+<!-- MobNav JS -->
+<script>
+
         let nav = document.querySelector('.main_nav');
         let mobNav = document.getElementById('mobNav');
-
+        
         function navToggler() {
             nav.classList.toggle('show-nav');
             mobNav.classList.toggle('mobNavCng');
         }
-
+        
         function closeNav() {
             nav.classList.remove('show-nav');
             mobNav.classList.remove('mobNavCng');
         }
-    </script>
+</script>
 
-    <!-- Initializing Number Counter JS -->
-    <script src="./Counter-Up2-master/dist/index.js"></script>
-    <!-- Custom JS for Number Counter -->
-    <script>
-
-        const counterUp = window.counterUp.default
-
-
-        const callback = entries => {
-            entries.forEach(entry => {
-                const el = entry.target
-                if (entry.isIntersecting && !el.classList.contains('is-visible')) {
-                    counterUp(el, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    el.classList.add('is-visible')
-                }
-                const fl = entry.target
-                if (entry.isIntersecting && !fl.classList.contains('is-visible')) {
-                    counterUp(fl, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    fl.classList.add('is-visible')
-                }
-                const gl = entry.target
-                if (entry.isIntersecting && !gl.classList.contains('is-visible')) {
-                    counterUp(gl, {
-                        duration: 2000,
-                        delay: 16,
-                    })
-                    gl.classList.add('is-visible')
-                }
-            })
-        }
-
-        const IO = new IntersectionObserver(callback, {
-            threshold: 1
-        })
-
-        const el = document.querySelector('.counter')
-        IO.observe(el)
-        const fl = document.querySelector('.counter2')
-        IO.observe(fl)
-        const gl = document.querySelector('.counter3')
-        IO.observe(gl)
-    </script>
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Swiper Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                dynamicBullets: true,
-            },
-        });
-    </script>
-
-    <!-- PopUp Window JS -->
-    <script>
-        const popWindow = document.querySelector(".popWindow");
-
+<!--   PopUp Window JS -->
+<!-- <script>
+    const popWindow = document.querySelector(".popWindow");
+        
         window.addEventListener("load", function () {
             this.setTimeout(
                 function open(event) {
@@ -421,15 +353,19 @@
                 }, 3000
             );
         });
-
+        
         function closePopUp() {
             popWindow.classList.remove("show");
-        };
-    </script>
-    <!--Track JS-->
+        }; 
+    </script> -->
 
+    <!-- Swiper JS -->
+    <!-- Icon Package Integration -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Track JS -->
     <script>
-
         function customEvent() {
             fbq('track', 'Contact');
         }
